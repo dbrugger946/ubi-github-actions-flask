@@ -4,7 +4,7 @@ on:
 
 env:
   IMAGE_REGISTRY: quay.io/dbrugger946
-  IMAGE_NAME: quay.io/dbrugger946/ubi-github-actions-flask
+  IMAGE_NAME: ubi-github-actions-flask
 
 jobs:
   build:
