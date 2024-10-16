@@ -3,7 +3,7 @@ on:
   - push
 
 env:
-  IMAGE_REGISTRY: quay.io
+  IMAGE_REGISTRY: quay.io/dbrugger946
   IMAGE_NAME: quay.io/dbrugger946/ubi-github-actions-flask
 
 jobs:
@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Print variables and secrets
+        run: | 
+          echo "env.QUAY_USER ${{ env.QUAY_USER }}"
+          echo "secrets.QUAY_REGISTRY_PASSWORD ${{ secrets.QUAY_REGISTRY_PASSWORD }} "
+      
 
       - name: Clone the repository
         uses: actions/checkout@v4
