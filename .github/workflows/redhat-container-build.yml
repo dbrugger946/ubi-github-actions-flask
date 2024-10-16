@@ -15,7 +15,7 @@ jobs:
 
       - name: Print variables and secrets
         run: | 
-          echo "env.QUAY_USER ${{ env.QUAY_USER }}"
+          echo "env.QUAY_USER ${{ vars.QUAY_USER }}"
           echo "secrets.QUAY_REGISTRY_PASSWORD ${{ secrets.QUAY_REGISTRY_PASSWORD }} "
       
 
@@ -43,7 +43,7 @@ jobs:
           registry: ${{ env.IMAGE_REGISTRY }}
           # username: dbrugger946
           # password: El1zab3th
-          username: ${{ env.QUAY_USER }}
+          username: ${{ vars.QUAY_USER }}
           password: ${{ secrets.QUAY_REGISTRY_PASSWORD }}
   
       - name: Print image url
